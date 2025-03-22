@@ -1,0 +1,7 @@
+components:
+  schemas:
+    totalCount:
+      name: X-Total-Count
+      description: Total number of items
+      schema:
+        $ref: '../../../schemas/common/headers.yaml#/components/schemas/totalCount' 

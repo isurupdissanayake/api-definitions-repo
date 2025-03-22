@@ -1,0 +1,10 @@
+components:
+  schemas:
+    contentType:
+      name: Content-Type
+      description: Response payload media type
+      schema:
+        type: string
+        pattern: '^[a-zA-Z0-9]+/[a-zA-Z0-9+.-]+$'
+        example: "application/json"
+      required: true 

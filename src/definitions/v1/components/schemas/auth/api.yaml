@@ -1,0 +1,38 @@
+components:
+  schemas:
+    newLoginRequest:
+      type: object
+      properties:
+        username:
+          $ref: "../common/types.yaml#/components/schemas/email"
+        password:
+          type: string
+        operatingSystem:
+          type: string
+        browser:
+          type: string
+        device:
+          type: string
+        osVersion:
+          type: string
+        browserVersion:
+          type: string
+        deviceType:
+          type: string
+        orientation:
+          type: string
+        ipAddress:
+          type: string
+      required:
+        - username
+        - password
+    newLoginResponse:
+      type: object
+      properties:
+        token:
+          type: string
+        expiration:
+          type: string
+      required:
+        - token
+        - expiration

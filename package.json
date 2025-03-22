@@ -1,0 +1,21 @@
+{
+    "name": "api-definition-repo",
+    "version": "1.0.0",
+    "description": "API Definitions",
+    "scripts": {
+        "validate": "node src/scripts/validate.js",
+        "bundle": "node src/scripts/bundle.js",
+        "generate-docs": "node src/scripts/generate-docs.js"
+    },
+    "dependencies": {
+        "@apidevtools/swagger-parser": "^10.0.2",
+        "openapi-to-postmanv2": "^5.0.0",
+        "swagger-parser": "^8.0.0",
+        "yaml": "^2.3.1"
+    },
+    "devDependencies": {
+        "@stoplight/spectral": "^6.5.0",
+        "ajv": "^8.12.0"
+    },
+    "license": "MIT"
+}

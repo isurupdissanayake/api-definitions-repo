@@ -1,0 +1,39 @@
+components:
+  schemas:
+    # Authentication
+    authorization:
+      summary: Bearer token example
+      value:
+        Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIn0.dozjgNryP4J3jVmNHl0w5N_XgL0n3I9PlFUP0THsR8U"
+
+    apiKey:
+      summary: API key example
+      value:
+        X-API-Key: "sk_test_123456789"
+
+    # Content negotiation
+    accept:
+      summary: Accept header example
+      value:
+        Accept: "application/json"
+
+    contentType:
+      summary: Content-Type header example
+      value:
+        Content-Type: "application/json"
+
+    acceptLanguage:
+      summary: Accept-Language header example
+      value:
+        Accept-Language: "en-US"
+
+    # Caching
+    ifNoneMatch:
+      summary: If-None-Match header example
+      value:
+        If-None-Match: "W/\"123456789\""
+
+    ifModifiedSince:
+      summary: If-Modified-Since header example
+      value:
+        If-Modified-Since: "Wed, 21 Oct 2015 07:28:00 GMT" 

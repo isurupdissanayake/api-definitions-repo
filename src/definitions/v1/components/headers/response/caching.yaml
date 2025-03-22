@@ -1,0 +1,26 @@
+components:
+  schemas:
+    eTag:
+      description: Entity tag for cache validation
+      schema:
+        type: string
+        pattern: '^(W/)?"[^"]*"$'
+        example: "\"33a64df551425fcc55e4d42a148795d9f25f89d4\""
+      required: true
+
+    lastModified:
+      description: Resource last modification date
+      schema:
+        type: string
+        format: http-date
+        pattern: '^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), \d{2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{4} \d{2}:\d{2}:\d{2} GMT$'
+        example: "Wed, 21 Oct 2015 07:28:00 GMT"
+      required: true
+
+    cacheControl:
+      description: Caching directives
+      schema:
+        type: string
+        pattern: '^(no-cache|no-store|max-age=\d+|must-revalidate|private|public|no-transform)(, (no-cache|no-store|max-age=\d+|must-revalidate|private|public|no-transform))*$'
+        example: "private, max-age=3600, must-revalidate"
+      required: true 

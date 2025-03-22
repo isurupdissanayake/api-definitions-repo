@@ -1,0 +1,44 @@
+components:
+  schemas:
+    responses:
+      errors:
+        badRequest:
+          value:
+            code: 400
+            message: "Invalid request parameters"
+            details:
+              field: "email"
+              reason: "Invalid email format"
+        unauthorized:
+          value:
+            code: 401
+            message: "Authentication required"
+            details:
+              reason: "Invalid or expired token"
+        forbidden:
+          value:
+            code: 403
+            message: "Access denied"
+            details:
+              reason: "Insufficient permissions"
+        notFound:
+          value:
+            code: 404
+            message: "Resource not found"
+            details:
+              resourceType: "booking"
+              resourceId: "123e4567-e89b-12d3-a456-426614174000"
+        internalServerError:
+          value:
+            code: 500
+            message: "An unexpected error occurred"
+            details:
+              errorId: "err_123456"
+              timestamp: "2024-03-02T12:00:00Z"
+        serviceUnavailable:
+          value:
+            code: 503
+            message: "Service temporarily unavailable"
+            details:
+              retryAfter: "60"
+              maintenanceWindow: "2024-03-02T14:00:00Z" 

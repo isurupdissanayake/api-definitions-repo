@@ -1,0 +1,36 @@
+openapi: 3.0.0
+info:
+  title: API Definitions
+  description: API Definitions, documentation, examples and test cases
+  version: 1.0.0
+
+servers:
+  - url: http://test.cat2020.lk
+    description: Development Server
+  - url: http://localhost:5000
+    description: Local Development Server
+
+paths: 
+  /api/auth/login/newlogin:
+    $ref: './domains/auth.yaml#/paths/~1api~1auth~1login~1newlogin'
+
+components:
+  schemas:
+    newLoginRequest:
+      $ref: './components/schemas/auth/api.yaml#/components/schemas/newLoginRequest'  # Reference to the newLoginRequest schema
+    newLoginResponse:
+      $ref: './components/schemas/auth/api.yaml#/components/schemas/newLoginResponse' 
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: |
+        JWT token authentication. The token should be included in the Authorization header.
+        Example: Authorization: Bearer <token>
+        
+        Available scopes:
+        * read - Read access to resources
+        * write - Write access to resources (includes create, update, delete)
+security:
+  - bearerAuth: [] 

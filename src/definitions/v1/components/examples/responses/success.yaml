@@ -1,0 +1,46 @@
+components:
+  schemas:
+    responses:
+      success:
+        ok:
+          single_item:
+            value:
+              success: true
+              data: {
+                "id": "123e4567-e89b-12d3-a456-426614174000",
+                "name": "Sample Property",
+                "status": "active"
+              }
+          list:
+            value:
+              success: true
+              data: {
+                "items": [
+                  {
+                    "id": "123e4567-e89b-12d3-a456-426614174000",
+                    "name": "Property 1"
+                  },
+                  {
+                    "id": "123e4567-e89b-12d3-a456-426614174001",
+                    "name": "Property 2"
+                  }
+                ],
+                "total": 2
+              }
+        created:
+          basic:
+            value:
+              success: true
+              data: {
+                "id": "123e4567-e89b-12d3-a456-426614174000",
+                "createdAt": "2024-03-02T12:00:00Z"
+              }
+          detailed:
+            value:
+              success: true
+              data: {
+                "id": "123e4567-e89b-12d3-a456-426614174000",
+                "name": "New Property",
+                "status": "pending",
+                "createdAt": "2024-03-02T12:00:00Z"
+              } 

@@ -1,0 +1,43 @@
+components:
+  schemas:
+    x-rate-limit:
+      description: Request limit per hour based on API key tier
+      schema:
+        type: integer
+        minimum: 1
+        example: 1000
+      required: true
+
+    x-rate-limit-remaining:
+      description: Remaining requests for the current time window
+      schema:
+        type: integer
+        minimum: 0
+        example: 950
+      required: true
+
+    x-rate-limit-reset:
+      description: Time when the rate limit resets (Unix timestamp)
+      schema:
+        type: integer
+        format: int64
+        minimum: 0
+        example: 1709424000
+      required: true
+
+    x-rate-limit-burst:
+      description: Maximum burst requests allowed per minute
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        example: 50
+      required: true
+
+    x-rate-limit-policy:
+      description: Applied rate limiting policy
+      schema:
+        type: string
+        enum: [standard, premium, enterprise]
+        example: "standard"
+      required: true 

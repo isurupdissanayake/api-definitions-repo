@@ -1,0 +1,24 @@
+{
+  "environment": {
+    "name": "Local env",
+    "values": [
+      {
+        "key": "baseUrl",
+        "value": "http://localhost:5000",
+        "enabled": true
+      },
+      {
+        "key": "username",
+        "value": "mps@gmail.com",
+        "enabled": true
+      },
+      {
+        "key": "password",
+        "value": "cat2020admin",
+        "enabled": true
+      }
+    ],
+    "timestamp": 1620000000000,
+    "id": "local_environment_id"
+  }
+}

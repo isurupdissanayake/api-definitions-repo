@@ -1,0 +1,22 @@
+components:
+  schemas:
+    accept:
+      name: Accept
+      description: Acceptable response media types
+      required: false
+      schema:
+        $ref: '../../../schemas/common/headers.yaml#/components/schemas/mediaType'
+
+    contentType:
+      name: Content-Type
+      description: Request payload media type
+      required: true
+      schema:
+        $ref: '../../../schemas/common/headers.yaml#/components/schemas/mediaType'
+
+    acceptLanguage:
+      name: Accept-Language
+      description: Preferred response language
+      required: false
+      schema:
+        $ref: '../../../schemas/common/headers.yaml#/components/schemas/languageCode' 

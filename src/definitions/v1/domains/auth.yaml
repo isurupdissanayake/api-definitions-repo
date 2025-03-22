@@ -1,0 +1,23 @@
+paths:
+  /api/auth/login/newlogin:
+    post:
+      summary: Login with email and password
+      description: Login to existing user account
+      operationId: newLogin
+      security:
+        - bearerAuth: []
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:  
+          application/json: 
+            schema:
+              $ref: '../components/schemas/auth/api.yaml#/components/schemas/newLoginRequest'
+      responses:
+        "200":
+          description: Login Successful
+          content:
+            application/json:
+              schema:
+                $ref: '../components/schemas/auth/api.yaml#/components/schemas/newLoginResponse'

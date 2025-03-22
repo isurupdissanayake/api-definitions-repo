@@ -1,0 +1,24 @@
+{
+  "environment": {
+    "name": "Dev env",
+    "values": [
+      {
+        "key": "baseUrl",
+        "value": "http://test.cat2020.lk",
+        "enabled": true
+      },
+      {
+        "key": "username",
+        "value": "mps@gmail.com",
+        "enabled": true
+      },
+      {
+        "key": "password",
+        "value": "cat2020admin",
+        "enabled": true
+      }
+    ],
+    "timestamp": 1620000000000,
+    "id": "dev_environment_id"
+  }
+}

@@ -1,0 +1,31 @@
+components:
+  schemas:
+    authorization:
+      description: |
+        Bearer token for authentication.
+        Must be a valid JWT token issued by the authentication service.
+      required: true
+      schema:
+        type: string
+        pattern: '^Bearer [A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$'
+        example: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+      x-validation:
+        validateFormat: true
+        validateSignature: true
+        validateExpiry: true
+        validateIssuer: true
+        validateAudience: true
+
+    x-api-key:
+      description: |
+        API key for rate limiting and usage tracking.
+        Must be used in conjunction with Bearer token.
+      required: true
+      schema:
+        type: string
+        pattern: '^ak_[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$'
+        example: "ak_123e4567-e89b-12d3-a456-426614174000"
+      x-validation:
+        validateFormat: true
+        validateExpiry: true
+        validateStatus: true 

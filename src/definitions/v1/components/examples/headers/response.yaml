@@ -1,0 +1,44 @@
+components:
+  schemas:
+    # Content information
+    contentType:
+      summary: Content-Type header example
+      value:
+        Content-Type: "application/json"
+
+    # Caching
+    eTag:
+      summary: ETag header example
+      value:
+        ETag: "W/\"123456789\""
+
+    lastModified:
+      summary: Last-Modified header example
+      value:
+        Last-Modified: "Wed, 21 Oct 2015 07:28:00 GMT"
+
+    cacheControl:
+      summary: Cache-Control header example
+      value:
+        Cache-Control: "private, max-age=3600"
+
+    # Rate limiting
+    rateLimiting:
+      summary: Rate limiting headers example
+      value:
+        X-RateLimit-Limit: 1000
+        X-RateLimit-Remaining: 999
+        X-RateLimit-Reset: 1635724800
+
+    # Pagination
+    totalCount:
+      summary: Total count header example
+      value:
+        X-Total-Count: 100
+
+    # API information
+    apiInfo:
+      summary: API information headers example
+      value:
+        X-API-Version: "v1"
+        X-Request-ID: "123e4567-e89b-12d3-a456-426614174000" 

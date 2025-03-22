@@ -1,0 +1,15 @@
+components:
+  schemas:
+    ifNoneMatch:
+      name: If-None-Match
+      description: Entity tag for cache validation
+      required: false
+      schema:
+        $ref: '../../../schemas/common/headers.yaml#/components/schemas/eTag'
+
+    ifModifiedSince:
+      name: If-Modified-Since
+      description: Last modification date for cache validation
+      required: false
+      schema:
+        $ref: '../../../schemas/common/headers.yaml#/components/schemas/httpDate' 

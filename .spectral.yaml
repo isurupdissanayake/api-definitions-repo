@@ -1,0 +1,9 @@
+extends: "spectral:oas"
+
+rules:
+  info-contact: off
+  operation-summary: error
+  operation-description: warn
+  parameter-description: warn
+  response-description: error
+  security-defined: error
